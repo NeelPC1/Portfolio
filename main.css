@@ -1,0 +1,59 @@
+
+.mountain{
+    background-image: url("https://static.vecteezy.com/system/resources/previews/029/455/877/non_2x/winter-scene-with-white-snow-illustration-snow-covered-trees-against-the-backdrop-of-forests-and-mountains-snowdrifts-sparkling-in-frost-and-frozen-firs-christmas-horizontal-scene-vector.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /*fixed
+The background is fixed relative to the viewport. Even if an element has a
+ scrolling mechanism, the background doesn't move with the element.*/
+ background-position: center;
+ height:100vh;
+ /*needed to give it height even with size*/
+}
+
+.fade {
+    height: 800px; /* Adjust based on how gradual you want the fade */
+    background: linear-gradient(#f0f8fc, rgb(239, 176, 187) );
+  }
+
+.sky{
+    background-image: url("https://images5.alphacoders.com/132/thumb-1920-1327980.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /*fixed
+The background is fixed relative to the viewport. Even if an element has a
+ scrolling mechanism, the background doesn't move with the element.*/
+ background-position: center;
+ height:100vh;
+ /*needed to give it height even with size*/
+ background-size: cover;
+}
+.fade2{
+    height: 1000px; /* Adjust based on how gradual you want the fade */
+    background: linear-gradient(rgb(255, 202, 212), black);
+}
+.space{
+    background-image: url("https://i.pinimg.com/736x/96/69/32/966932addf40da9dccfacad5d09b15da.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /*fixed
+The background is fixed relative to the viewport. Even if an element has a
+ scrolling mechanism, the background doesn't move with the element.*/
+ background-position: center;
+ height:100vh;
+ /*needed to give it height even with size*/
+ background-size: cover;
+}
+h1, p {
+    margin: 0;
+    padding: 0;
+  }
+
+  /*keyframes allows you to animate*/
+  @keyframes shooting-stars {
+    from {top: 200px;}
+    to {top: 600px;}
+  }
+  
+
