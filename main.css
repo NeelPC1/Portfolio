@@ -4,6 +4,7 @@
     background-size:cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    position: relative;
     /*fixed
 The background is fixed relative to the viewport. Even if an element has a
  scrolling mechanism, the background doesn't move with the element.*/
@@ -13,7 +14,7 @@ The background is fixed relative to the viewport. Even if an element has a
 }
 
 .fade {
-    height: 800px; /* Adjust based on how gradual you want the fade */
+    height: 1500px; /* Adjust based on how gradual you want the fade */
     background: linear-gradient(#f0f8fc, rgb(239, 176, 187) );
   }
 
@@ -30,7 +31,7 @@ The background is fixed relative to the viewport. Even if an element has a
  background-size: cover;
 }
 .fade2{
-    height: 1000px; /* Adjust based on how gradual you want the fade */
+    height: 1500px; /* Adjust based on how gradual you want the fade */
     background: linear-gradient(rgb(255, 202, 212), black);
 }
 .space{
@@ -44,16 +45,52 @@ The background is fixed relative to the viewport. Even if an element has a
  height:100vh;
  /*needed to give it height even with size*/
  background-size: cover;
+ position:relative;
 }
 h1, p {
     margin: 0;
     padding: 0;
   }
 
-  /*keyframes allows you to animate*/
-  @keyframes shooting-stars {
-    from {top: 200px;}
-    to {top: 600px;}
-  }
-  
 
+  .shooting-stars{
+    width:9%;
+    height:10%;
+    position: absolute; /*needed to allow it to use top left right bottom*/
+    left:20px;
+    top:10px;
+  animation-name: fly;
+  animation-duration: 10s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  }
+
+.hi{
+position: absolute;
+margin-top: 50vh;
+margin-left: 44.5vw;
+
+
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+
+@keyframes fly 
+{
+0%{
+  transform: translateX(10px) translateY(-20px)
+}
+100%{
+  transform: translateX(95vw) translateY(40vh)
+}
+}
+.mountain{
+  cursor: url(https://cdn.custom-cursor.com/db/17300/32/animals-sparrow-cursor.png) , default !important;}
+
+  .my-button{
+    cursor: url(https://cdn.custom-cursor.com/db/17299/32/animals-sparrow-pointer.png) , default !important;}
+  
