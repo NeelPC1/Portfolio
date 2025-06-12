@@ -23,3 +23,12 @@ function shootingStar(){
 }
 setInterval(shootingStar, 5)
 */
+
+let shooting=document.querySelector(".shooting-stars");
+let starSound=documnet.querySelector("audio")
+//let button=document.querySelector("myButton");
+
+shooting.addEventListener("hover", function(){
+    starSound.play();
+    starSound.currentTime = 0;
+})

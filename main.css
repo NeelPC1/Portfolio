@@ -53,6 +53,7 @@ h1, p {
   }
 
 
+
   .shooting-stars{
     width:9%;
     height:10%;
@@ -64,6 +65,9 @@ h1, p {
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
   }
+.shooting-stars:hover{
+  content: url("https://png.pngtree.com/png-clipart/20220916/original/pngtree-retro-cartoon-explosion-png-image_8620539.png");
+}
 
 .hi{
 position: absolute;
@@ -89,8 +93,19 @@ margin-left: 44.5vw;
 }
 }
 .mountain{
-  cursor: url(https://cdn.custom-cursor.com/db/17300/32/animals-sparrow-cursor.png) , default !important;}
+  cursor: url(https://cdn.custom-cursor.com/db/17300/32/animals-sparrow-cursor.png) , default;}
+  #myButton{
+    cursor: url(https://cdn.custom-cursor.com/db/17299/32/animals-sparrow-pointer.png), pointer !important;}
 
-  .my-button{
-    cursor: url(https://cdn.custom-cursor.com/db/17299/32/animals-sparrow-pointer.png) , default !important;}
-  
+.sky{
+  cursor: url(https://cdn.custom-cursor.com/db/20870/32/vsco-blue-pink-airplane-and-luggage-cursor.png), default;}
+  #a{
+  cursor: url(https://cdn.custom-cursor.com/db/20869/32/vsco-blue-pink-airplane-and-luggage-pointer.png), pointer !important;
+}
+
+.space{
+  cursor: url(https://cdn.custom-cursor.com/db/12296/32/neon-rocket-and-planet-cursor.png), default;
+}
+  .shooting-stars{
+  cursor: url(https://cdn.custom-cursor.com/db/12295/32/neon-rocket-and-planet-cursor.png), pointer !important;
+}
