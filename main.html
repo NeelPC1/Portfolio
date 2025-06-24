@@ -11,63 +11,64 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-            </li>
-          </ul>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
-        </div>
-      </div>
-    </nav>
-    <div class="mountain">
-      <h1 class="hi">Hi, I'm Neel!</h1>
+    <div class="topnav">
+      <a class="active" href="#top" id="top-cursor">Home</a>
+      <a href="#middle" id="middle-cursor">About Me</a>
+      <a href="#middle" id="bottom-cursor">Portfolio</a>
+      <a href="#middle" id="bottom-cursor">Resume</a>
+      <a href="#bottom" id="bottom-cursor">Contact Me</a>
       <button id="mode">Toggle Dark Mode</button>
     </div>
+    <div class="mountain" id="top">
+      <h1 class="hi">Hi, I'm Neel!</h1>
+    
+    </div>
 
-    <div class="fade"></div>
+    <div class="myFade"></div>
 
-    <div class="sky">
-      <p>
+    <div class="sky" id="middle">
+      <div class="cwrapper"></div>
+      <div class="projects-container">
+        <div class="project project1">
+          <a href="http://127.0.0.1:5500/index.html" target="_blank"><img src="https://preview.redd.it/im-trying-to-get-a-path-in-a-cave-splitting-into-two-v0-439num547hkb1.png?width=640&crop=smart&auto=webp&s=6146cc91d241576906841f3ed2231e58a108f65d" ></a>
+        </div>
 
-      </p>
+        <div class="project project2">
+          <a href="https://neelpc1.github.io/Neel-s-project-4-buzzfeed-quiz/" target="_blank"><img src="https://library.rice.edu/sites/default/files/styles/wide/public/media-images/2022-DigitalSheetMusicTrial.png?itok=NZu9Rdcy" ></a>
+        </div>
+
+        <div class="project project3">
+          <a href="https://neelpc1.github.io/rock-paper-scissors/" target="_blank"><img src="https://media.istockphoto.com/id/1269211670/vector/rock-paper-scissors-body-parts-icon-set.jpg?s=612x612&w=0&k=20&c=OSu0AGUV7Tq3-gotwwOywCRcv4OMrt7KqQMhI_tPZOw=" ></a>
+        </div>
+
+        <div class="project project4">
+          <a href=" https://neelpc1.github.io/int-u2-project-23-24-starter-code-2/" target="_blank"><img src="https://www.biotage.com/hubfs/Stock%20images/Hands%20and%20Earth.%20Symbol%20of%20environmental%20protection.jpeg" ></a>
+        </div>
+        <div class="project projec1.1">
+          <a href="http://127.0.0.1:5500/index.html" target="_blank"><img src="https://preview.redd.it/im-trying-to-get-a-path-in-a-cave-splitting-into-two-v0-439num547hkb1.png?width=640&crop=smart&auto=webp&s=6146cc91d241576906841f3ed2231e58a108f65d" ></a>
+        </div>
+
+        <div class="project project2.1">
+          <a href="https://neelpc1.github.io/Neel-s-project-4-buzzfeed-quiz/" target="_blank"><img src="https://library.rice.edu/sites/default/files/styles/wide/public/media-images/2022-DigitalSheetMusicTrial.png?itok=NZu9Rdcy" ></a>
+        </div>
+
+        <div class="project project3.1">
+          <a href="https://neelpc1.github.io/rock-paper-scissors/" target="_blank"><img src="https://media.istockphoto.com/id/1269211670/vector/rock-paper-scissors-body-parts-icon-set.jpg?s=612x612&w=0&k=20&c=OSu0AGUV7Tq3-gotwwOywCRcv4OMrt7KqQMhI_tPZOw=" ></a>
+        </div>
+
+        <div class="project project4.1">
+          <a href=" https://neelpc1.github.io/int-u2-project-23-24-starter-code-2/" target="_blank"><img src="https://www.biotage.com/hubfs/Stock%20images/Hands%20and%20Earth.%20Symbol%20of%20environmental%20protection.jpeg" ></a>
+        </div>
+      </div>
+      </div>
     </div>
 
     <div class="fade2">
 
     </div>
 
-    <div class="space">
-        <p>
-
-        </p>
+    <div class="space" id="bottom">
+        <p></p>
         <img class ="shooting-stars" id = "shooting" src="https://png.pngtree.com/png-clipart/20220117/original/pngtree-light-blue-shooting-star-png-image_7149309.png"
         alt = "shooting star">
         <audio id="starSound" src="https://cdn.pixabay.com/download/audio/2025/03/11/audio_736bd23051.mp3"></audio>
