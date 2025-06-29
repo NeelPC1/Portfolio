@@ -5,6 +5,7 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   position: relative;
+  overflow: hidden;
   /*fixed
 The background is fixed relative to the viewport. Even if an element has a
 scrolling mechanism, the background doesn't move with the element.*/
@@ -24,6 +25,7 @@ height:100vh;
   background-image: url("https://images5.alphacoders.com/132/thumb-1920-1327980.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
+  max-width: 100%;
   /*fixed
 The background is fixed relative to the viewport. Even if an element has a
 scrolling mechanism, the background doesn't move with the element.*/
@@ -113,6 +115,7 @@ cursor: url(https://cdn.custom-cursor.com/db/20869/32/vsco-blue-pink-airplane-an
 .space{
 cursor: url(https://cdn.custom-cursor.com/db/12296/32/neon-rocket-and-planet-cursor.png), default;
 }
+
 .shooting-stars{
 cursor: url(https://cdn.custom-cursor.com/db/12295/32/neon-rocket-and-planet-cursor.png), pointer !important;
 }
@@ -124,23 +127,29 @@ cursor: url(https://cdn.custom-cursor.com/db/17299/32/animals-sparrow-pointer.pn
 .topnav a {
 
 
-text-align: center;
+
+
 padding-left: 5%;
 padding-right: 5%;
 outline: black;
 color:white;
-
+font-size:2.4vh;
 }
 .topnav{
 background-color: black;
 position:fixed;
 width: 100%;
 z-index: 100;
-top:0%;
+padding:.5vh;
 color:white;
 font-weight: larger;
 font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 font-size:larger;
+
+
+
+
+
 }
 #mode{
 background-color:aliceblue;
@@ -149,9 +158,13 @@ float:right;
 
 .topnav a:hover {
 color: #007acc;
+font-size:2.6vh ;
+
+
 }
 #mode:hover {
 color:darkmagenta;
+font-size:2.4vh;
 }
 #top-cursor{
 cursor: url(https://cdn.custom-cursor.com/db/17299/32/animals-sparrow-pointer.png), pointer !important;
@@ -168,18 +181,18 @@ cursor: url(https://cdn.custom-cursor.com/db/12296/32/neon-rocket-and-planet-cur
   justify-content: space-around;
   align-items: center;
   padding-top: 10vh;
-  width:max-content;
   transform-origin: center;
-  animation: scroll-right 12s linear infinite;
+  
+  flex-wrap:nowrap;
 }
 
 
 .project img {
-  width: 22vw;
-  height:22vh;
+  width: 15vw;
+  height:15vh;
   margin: 15vh;
   height: auto;
-  margin-top:15vh;
+  margin-top:10vh;
   cursor: pointer;
 
 }
@@ -189,19 +202,288 @@ cursor: url(https://cdn.custom-cursor.com/db/12296/32/neon-rocket-and-planet-cur
   transition: transform 0.3s ease;
   cursor: pointer;
 }
-@keyframes scroll-right {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%); /* how did i loop it */
-  }
-}
+
 .cwrapper {
-  width: 100vw;
+
   overflow: hidden;
   position: relative;
+  max-width:100%;
+  height:100%;
 }
 .projects-container:hover {
   animation-play-state: paused;
+}
+.adventure{
+  position:absolute;
+}
+.music{
+  position:absolute;
+}
+.rps{
+  position:absolute;
+}
+.climate{
+  position:absolute;}
+
+  .waterfall{
+    position:0;
+    display:block;
+    background-image: url("https://i.pinimg.com/originals/ed/bb/fa/edbbfa09356c4cbe1745e796f1805364.gif");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height:100vh;
+
+  }
+
+  .welcome {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 80px;
+  font-weight:750;
+  color: black;
+  text-align: center;
+  position:absolute;
+  top:30vh;
+  left: 10vw;
+
+}
+
+
+  .portfolio{
+    display:none;
+  }
+  .enter {
+    display: inline-block;
+    padding: 2vh 3vw;
+    font-size: 1.7vw;
+    font-weight:750;
+    color: black;
+    background: linear-gradient(#74ebd5,#ACB6E5);
+    border-radius: 40px;
+    border-color:white;
+    box-shadow: 0px 10px 20px rgba(37, 117, 252, 0.6);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center; 
+    margin-left:38.5vw;
+    margin-top:55vh;
+  }
+  
+  .enter:hover {
+    background: linear-gradient(#a8ff78, #78ffd6);
+    box-shadow: 7px 7px 7px rgba(7, 65, 7, 0.4);
+    transform: translateY(-3px);
+    transform:translateX(3px);
+    outline: black;
+  }
+  
+ 
+  .bird:focus{
+    outline: none;
+  }
+  .bird{
+    background-color: transparent;
+    width:5vw;
+    height:auto;
+    border:none;
+    position:absolute;
+    top:10vh;
+    padding:none;
+    text-decoration: none;
+    transform: translateY(0); /*bc it wasn't working as expected and Y was shifting*/
+
+    
+  }
+
+  
+  .adventure{
+    display:none;
+  }
+  .music{
+    display:none;
+  }
+  .rps{
+    display:none;
+  }
+  .climate{
+    display:none;
+  }
+  /* *{
+    outline: 1px solid red;
+} helpful tool for debugging, shows objects outlines*/
+
+.about-me{
+  background:#1e397b32;
+  border: 2px solid turquoise;
+  border-radius: 1.5vw;
+  padding-top:1vw;
+  padding-bottom:1vw;
+  width:20vw;
+  margin-left: 40vw;
+  text-align: center;
+  color:  #EFEFEF;
+  font-family: 'Poppins', sans-serif;
+  position: absolute;
+  top:10vh;
+  font-size: 3vw; 
+  font-weight: bolder;
+}
+
+
+
+
+
+#planets{
+  display:flex;
+  justify-content: space-evenly;
+}
+.planet1{
+  position:absolute;
+  top:10vh;
+  width:15vw;
+  left:80vw;
+
+}
+.planet2{
+  position:absolute;
+  top:40vh;
+  width:15vw;
+  left:80vw;
+}
+.planet3{
+  position:absolute;
+  top:72vh;
+  width:15vw;
+  left:80vw;
+}
+.planet-desc1{
+  position:absolute;
+  top:8vh;
+  left:82vw;
+  color: white;
+  font-family:'Times New Roman', Times, serif;
+}
+.planet-desc2{
+  position:absolute;
+  top:36vh;
+  left:83vw;
+  color: white;
+  font-family:'Times New Roman', Times, serif;
+}
+.planet-desc3{
+  position:absolute;
+  top:68vh;
+  left:80.5vw;
+  color: white;
+  font-family:'Times New Roman', Times, serif;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+.desc h2{
+  font-size:5vh;
+  color:#CCE6F4;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 800;
+  width: 70vw;
+}
+.desc p{
+  font-size:4vh;
+  font-weight: 600;
+  color: #bce891;
+  text-align: center;
+  font-family:fantasy;
+  display:block;
+  width: 70vw;
+  background-color:#0d132173;
+  padding-top:1vh;
+}
+
+
+.descriptions{
+  display:flex;
+  position: absolute;
+  text-align: center;
+  
+  left: 24.6vh;
+
+}
+
+.centerplanet-desc1{
+  position:absolute;
+  top:30vh;
+  left:5vw;
+  color: white;
+  display:none;
+  outline:white .1vw solid;
+  border-radius:1.2vw;
+}
+.centerplanet-desc2{
+  position:absolute;
+  top:30vh;
+  left:5vw;
+  color: white;
+  display:none;
+}
+.centerplanet-desc3{
+  position:absolute;
+  top:30vh;
+  left:5vw;
+  color: white;
+  display:none;
+}
+
+.centerplanet h1{
+  text-align:center;
+  font-size:5vh;
+  color:#CCE6F4;
+  font-weight: 500;
+  margin:1vw auto;
+}
+
+.centerplanet p{
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 2vw;
+  letter-spacing: .01vw;
+  width: 70vw;
+  margin: 1vw auto; 
+  padding: .25vw;
+  border-radius: 10px;
+  text-align: center;
+  font-family: 'Helvetica Neue', sans-serif;
+  color:white;
+
+}
+.centerplanet-desc2 img{
+
+  margin: .5vw auto;
+  display: absolute;
+  justify-content: center;
+  outline:none;
+  cursor:pointer;
+  margin:.2vw;
+}
+
+.linkedin{
+  width:20vw;
+  position:absolute;
+  left:22vw;
+}
+
+.github{
+  width:33.5vw;
+  position:absolute;
+  left:37vw;
+}
+
+.centerplanet iframe{
+  width: 90vw;
+  height: 67vh;
+  border: none;
+  margin: 1vw auto;
+  display: block;
+  position:absolute;
+  margin-top:0px;
 }
