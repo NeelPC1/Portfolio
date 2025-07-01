@@ -91,7 +91,7 @@ font-weight:600;
 @keyframes fly 
 {
 0%{
-transform: translateX(10px) translateY(-20px)
+transform: translateX(1vw) translateY(-2vh)
 }
 100%{
 transform: translateX(95vw) translateY(40vh)
@@ -129,8 +129,8 @@ cursor: url(https://cdn.custom-cursor.com/db/17299/32/animals-sparrow-pointer.pn
 
 
 
-padding-left: 5%;
-padding-right: 5%;
+padding-left: 8vw;
+padding-right: 8vw;
 outline: black;
 color:white;
 font-size:2.4vh;
@@ -238,7 +238,7 @@ cursor: url(https://cdn.custom-cursor.com/db/12296/32/neon-rocket-and-planet-cur
 
   .welcome {
   font-family: 'Courier New', Courier, monospace;
-  font-size: 80px;
+  font-size: 5.5vw;
   font-weight:750;
   color: black;
   text-align: center;
@@ -259,21 +259,21 @@ cursor: url(https://cdn.custom-cursor.com/db/12296/32/neon-rocket-and-planet-cur
     font-weight:750;
     color: black;
     background: linear-gradient(#74ebd5,#ACB6E5);
-    border-radius: 40px;
+    border-radius: 4vw;
     border-color:white;
-    box-shadow: 0px 10px 20px rgba(37, 117, 252, 0.6);
+    box-shadow: 0vw 1vw 2vw rgba(37, 117, 252, 0.6);
     cursor: pointer;
     transition: all 0.3s ease;
     text-align: center; 
-    margin-left:38.5vw;
+    margin-left:42vw;
     margin-top:55vh;
   }
   
   .enter:hover {
     background: linear-gradient(#a8ff78, #78ffd6);
-    box-shadow: 7px 7px 7px rgba(7, 65, 7, 0.4);
-    transform: translateY(-3px);
-    transform:translateX(3px);
+    box-shadow: .7vw .7vw .7vw rgba(7, 65, 7, 0.4);
+    transform: translateY(-.3vw);
+    transform:translateX(.3vw);
     outline: black;
   }
   
@@ -487,3 +487,124 @@ html{
   position:absolute;
   margin-top:0px;
 }
+/* Toggle Button */
+.clipboard-toggle img {
+  position: fixed;
+  bottom: 2vh;
+  right:88vw;
+  font-size: 1vw;
+  background: none;
+  cursor: pointer;
+  width:15vw;
+}
+
+.clipboard-panel {
+  position: fixed;
+  bottom: 2vh;
+  border-radius: 1vw;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+
+.clipboard-header img{
+  position:absolute;
+  font-weight: bold;
+  right:.5vw;
+  bottom:27.6vh;
+  background-color: none;
+  width:1vw;
+  height:auto;
+  z-index: 1000;
+}
+
+
+.clipboard-panel li {
+  margin-bottom: .2vw;
+  display: flex;
+  align-items: center;
+}
+
+.task-list{
+list-style-image: url("https://png.pngtree.com/png-clipart/20220511/original/pngtree-clipboard-with-blank-paper-png-image_7712400.png");
+display:none;
+  z-index: 2;
+}
+
+
+
+.header2{
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 6vh;
+  font-weight: 750;
+  margin-left:40vw;
+  color:black;
+
+}
+
+.background1{
+  padding:1vw;
+  width:12vw;
+  border-radius:2vw;
+  z-index: 1000;
+  color:black;
+  font-weight: 500;
+}
+.bgclip{
+ width:17vw; 
+ height:39vh;
+ position:absolute;
+  left: 1vw;
+  bottom:-2vw;
+  z-index: 1;
+}
+input[type="checkbox"] {
+  width: 1vw;
+  height: 1vw;
+  background-color: black;
+  border: .2vw solid white;
+  cursor: pointer;
+  border-radius: .3vw;
+  z-index: 2;
+}
+
+
+.confetti-container1 p{
+  position: absolute;
+  top: 3vh;
+  left: 87vw;
+  font-size:4vw;
+  pointer-events: none;
+  display:none;
+}
+
+.confetti-container2 p{
+  position: absolute;
+  top: 81vh;
+  left: 12vw;
+  font-size:4vw;
+  display:none;
+}
+.confetti-container3 p{
+  position: absolute;
+  top: 48vh;
+  left: 3vw;
+  font-size:4vw;
+  display:none;
+}
+.confetti-container4 p{
+  position: absolute;
+  top: 76vh;
+  left: 59vw;
+  font-size:4vw;
+  display:none;
+}
+.confetti-container5 p {
+  position: absolute;
+  top: 12vh;
+  left: 20vw;
+  font-size:4vw;
+  display:none;}
+
+  #pointer{
+    cursor:pointer;
+  }
