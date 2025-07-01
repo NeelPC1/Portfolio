@@ -35,7 +35,7 @@ let fade2=document.querySelector(".fade2");
 let project =document.querySelector(".project");
 let topnav= document.querySelector(".topnav");
 //let button=document.querySelector("myButton");
-
+let header2=document.querySelector(".header2")
 
 
 shooting.addEventListener("mouseover", function(){
@@ -56,6 +56,7 @@ let on = true;
             fade2.style.background = "linear-gradient(#221e52, black)";
             fade.style.opacity = "1";
             fade2.style.opacity = "1";
+            header2.style.color="white";
                        //DO fade//
         }else{
             mountain.style.backgroundImage = "URL('https://wallpaperbat.com/img/8614851-artistic-wallpaper-designs-cool-4k.png')";
@@ -76,7 +77,7 @@ let on = true;
 
 let images=["https://preview.redd.it/im-trying-to-get-a-path-in-a-cave-splitting-into-two-v0-439num547hkb1.png?width=640&crop=smart&auto=webp&s=6146cc91d241576906841f3ed2231e58a108f65d", "https://library.rice.edu/sites/default/files/styles/wide/public/media-images/2022-DigitalSheetMusicTrial.png?itok=NZu9Rdcy", "https://media.istockphoto.com/id/1269211670/vector/rock-paper-scissors-body-parts-icon-set.jpg?s=612x612&w=0&k=20&c=OSu0AGUV7Tq3-gotwwOywCRcv4OMrt7KqQMhI_tPZOw=", "https://www.biotage.com/hubfs/Stock%20images/Hands%20and%20Earth.%20Symbol%20of%20environmental%20protection.jpeg"]
 let projectsContainer= document.querySelector(".projects-container");
-const slides=[...projectsContainer.children];//The spread operator ... takes all the elements from that collection and “spreads” them into a new actual array.
+let slides=[...projectsContainer.children];//The spread operator ... takes all the elements from that collection and “spreads” them into a new actual array.
 let scrollX=0;
 let scrollSpeed=4;
 function duplicateSlides() {
@@ -302,3 +303,71 @@ planet3.addEventListener("click", function(){
     planetDesc2.style.display = "none";
     planetDesc3.style.display = "none";
 });
+
+
+let taskList= document.querySelector(".task-list");
+let clipboardToggle= document.querySelector(".clipboard-toggle");
+let taskProjects= document.querySelector(".task-projects");
+let taskResume= document.querySelector(".task-resume");
+let taskContact= document.querySelector(".task-contact");
+let taskAbout= document.querySelector(".task-about");
+let confetti1=document.querySelector(".confetti-container1 p");
+let confetti2=document.querySelector(".confetti-container2 p");
+let confetti3=document.querySelector(".confetti-container3 p");
+let confetti4=document.querySelector(".confetti-container4 p");
+let confetti5=document.querySelector(".confetti-container5 p");
+
+clipboardToggle.addEventListener("click", function(){
+    taskList.style.display = "block";
+    clipboardToggle.style.display = "none";
+    console.log("Hello")
+    bgClip.style.display = "block";
+})
+let checkboxes = document.querySelectorAll('input[type="checkbox"]');
+let bgClip= document.querySelector(".bgclip");
+function checkAllBoxes() {
+    // runs through each checkbox in the array and checks if its checked. if all are checked, it'll do the thing
+    let allChecked = true;
+    checkboxes.forEach(checkbox => {
+      if (!checkbox.checked) { //runs through each checkbox in the array, if any aren't checked, it keeps it as false
+        allChecked = false;
+      }
+    });
+  
+    if (allChecked) {
+        taskList.style.display = "none";
+        confetti1.style.display = "block";
+        confetti2.style.display = "block";
+        confetti3.style.display = "block";
+        confetti4.style.display = "block";
+        confetti5.style.display = "block";
+        setTimeout(confettiDisplayEnd, 500);//https://developer.mozilla.org/en-US/docs/Web/API/Window/setTimeout
+        setTimeout(function(){taskList.style.display = "none";
+            confetti1.style.display = "block";
+            confetti2.style.display = "block";
+            confetti3.style.display = "block";
+            confetti4.style.display = "block";
+            confetti5.style.display = "block";}, 1000);
+    }
+        setTimeout(confettiDisplayEnd,3500)
+    console.log("hi")
+  }
+
+taskAbout.addEventListener("change", checkAllBoxes);//https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/change_event
+taskResume.addEventListener("change", checkAllBoxes);//https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/change_event
+taskProjects.addEventListener("change", checkAllBoxes);//https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/change_event
+taskContact.addEventListener("change", checkAllBoxes);//https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/change_event
+function confettiDisplayEnd(){
+    confetti1.style.display="none";
+    confetti2.style.display="none";
+    confetti3.style.display="none";
+    confetti4.style.display="none";
+    confetti5.style.display="none";
+}
+let leave= document.querySelector(".x");
+leave.addEventListener("click", function(){
+    document.querySelector(".bgclip").style.display = "none";
+    taskList.style.display = "none";
+    clipboardToggle.style.display = "block";
+    console.log("hello1");
+})
