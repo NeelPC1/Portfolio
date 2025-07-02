@@ -598,6 +598,9 @@ input[type="checkbox"] {
   font-size:4vw;
   display:none;
 }
+.sky h1{padding-top:15vh;
+
+}
 .confetti-container5 p {
   position: fixed;
   top: 12vh;
