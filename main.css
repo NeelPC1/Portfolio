@@ -180,7 +180,7 @@ cursor: url(https://cdn.custom-cursor.com/db/12296/32/neon-rocket-and-planet-cur
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding-top: 10vh;
+  padding-top: 5vh;
   transform-origin: center;
   
   flex-wrap:nowrap;
@@ -192,7 +192,7 @@ cursor: url(https://cdn.custom-cursor.com/db/12296/32/neon-rocket-and-planet-cur
   height:15vh;
   margin: 15vh;
   height: auto;
-  margin-top:10vh;
+  margin-top:2vh;
   cursor: pointer;
 
 }
@@ -442,6 +442,9 @@ html{
   font-weight: 500;
   margin:1vw auto;
 }
+.sky h1{padding-top:10vh;
+
+}
 
 .centerplanet p{
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -597,9 +600,6 @@ input[type="checkbox"] {
   left: 59vw;
   font-size:4vw;
   display:none;
-}
-.sky h1{padding-top:15vh;
-
 }
 .confetti-container5 p {
   position: fixed;
