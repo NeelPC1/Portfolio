@@ -38,10 +38,10 @@ let topnav= document.querySelector(".topnav");
 let header2=document.querySelector(".header2")
 
 
-shooting.addEventListener("mouseover", function(){
+/*shooting.addEventListener("mouseover", function(){
     starSound.play();
     starSound.currentTime = 0;
-})
+})//doesn't work*/
 
 let on = true; 
     mode.addEventListener("click", function(){
@@ -81,7 +81,7 @@ let slides=[...projectsContainer.children];//The spread operator ... takes all t
 let scrollX=0;
 let scrollSpeed=4;
 function duplicateSlides() {
-    // clone all original slides and append them
+    // clone all original slides and append them to DOm
     slides.forEach(function(slide) {
       let clone = slide.cloneNode(true);
       projectsContainer.appendChild(clone);
@@ -154,16 +154,17 @@ function duplicateSlides() {
   function loop() {
     if (!isPaused) {
      
-    scrollX += scrollSpeed;
+    scrollX += scrollSpeed;//the position keeps adding the scroll speed, or it keeps adding 4px
     if (scrollX >= projectsContainer.scrollWidth / 2) {// its divided by 2 since the width includes the duped slides
       // Reset scroll position and duplicate slides again, it continously dupes every time one set of images goes, essentially 
-      //always keepings 2 sets of images in the container
+      //always keepings 2 sets of images in the container=seamless
       scrollX = 0;
       duplicateSlides();
     
     }
-    projectsContainer.style.transform = "translateX(" + (-scrollX) + "px)";}
-    requestAnimationFrame(loop);
+    projectsContainer.style.transform = "translateX(" + (-scrollX) + "px)";} //this uses the transform property in css
+    //to move the slides to the scrollX value whihc is continously increased
+    requestAnimationFrame(loop);//continously runs the functions smoothly
   }
   
   loop();
